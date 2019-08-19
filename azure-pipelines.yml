@@ -77,3 +77,4 @@ stages:
               appType: functionAppLinux
               appName: $(functionAppName)
               package: '$(Pipeline.Workspace)/drop/$(Build.BuildId).zip'
+              appSettings: -SQL_USERNAME $(SQL_USERNAME) -SQL_PASSWORD $(SQL_PASSWORD) -SQL_SERVER $(SQL_SERVER) -SQL_DATABASE $(SQL_DATABASE) -SENDGRID_API_KEY $(SENDGRID_API_KEY) -SENDGRID_TEMPLATE_ID $(SENDGRID_TEMPLATE_ID) -RECIPIENT_EMAIL $(RECIPIENT_EMAIL) -SENDER_EMAIL $(SENDER_EMAIL) 
